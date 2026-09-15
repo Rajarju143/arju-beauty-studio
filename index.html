@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arju Beauty Studio — Beauty, Elevated</title>
+
+<meta
+  name="description"
+  content="Arju Beauty Studio — Luxury beauty, bridal makeup, hair styling and skincare."
+>
+
+<style>
+:root{
+  --cream:#f7f1e9;
+  --paper:#fffaf4;
+  --brown:#241817;
+  --brown2:#3a2724;
+  --muted:#796965;
+  --gold:#b9965d;
+  --gold2:#d9bd86;
+  --rose:#a87572;
+  --line:rgba(36,24,23,.13);
+  --white:#fff;
+  --max:1200px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--cream);
+  color:var(--brown);
+  overflow-x:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(calc(100% - 48px),var(--max));
+  margin:auto;
+}
+
+/* ================= NAV ================= */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+
+  padding:20px 0;
+
+  transition:.3s ease;
+}
+
+.nav-inner{
+  width:min(calc(100% - 40px),1180px);
+  margin:auto;
+
+  min-height:62px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+
+  padding:8px 10px 8px 22px;
+
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50px;
+
+  background:rgba(48,32,29,.45);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+  color:#fff;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:20px;
+  white-space:nowrap;
+}
+
+.logo-circle{
+  width:36px;
+  height:36px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:var(--brown);
+  background:var(--gold2);
+
+  font-family:Georgia,serif;
+  font-size:17px;
+  font-style:italic;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:30px;
+
+  font-size:11px;
+  letter-spacing:.5px;
+}
+
+.nav-links a{
+  opacity:.82;
+  transition:.25s ease;
+}
+
+.nav-links a:hover{
+  opacity:1;
+  color:var(--gold2);
+}
+
+.nav-book{
+  min-height:42px;
+  padding:0 19px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:30px;
+
+  color:var(--brown);
+  background:#fff8ef;
+
+  font-size:10px;
+  font-weight:800;
+
+  transition:.25s ease;
+}
+
+.nav-book:hover{
+  transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:850px;
+
+  position:relative;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:145px 0 75px;
+
+  overflow:hidden;
+
+  background:#2a1b19;
+  color:#fff;
+}
+
+.hero-photo{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24,14,13,.88) 0%,
+      rgba(24,14,13,.63) 42%,
+      rgba(24,14,13,.22) 100%
+    ),
+    url("https://thedeal.qa/_next/image?q=75&url=https%3A%2F%2Fthedealqa.s3.eu-central-1.amazonaws.com%2Fprojects%2Fimg_6kIA7AGcqI_1776507667.png&w=2048")
+    center/cover no-repeat;
+
+  transform:scale(1.01);
+}
+
+.hero-photo::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15,8,7,.7),
+      transparent 55%
+    );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+}
+
+.hero-kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:24px;
+
+  color:var(--gold2);
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hero-kicker span{
+  width:42px;
+  height:1px;
+  background:var(--gold2);
+}
+
+.hero h1{
+  max-width:820px;
+
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-size:clamp(65px,8vw,112px);
+  line-height:.87;
+  letter-spacing:-6px;
+  font-weight:normal;
+}
+
+.hero h1 em{
+  color:#e6c995;
+  font-weight:normal;
+}
+
+.hero-description{
+  max-width:480px;
+
+  margin:28px 0;
+
+  color:#dfd1ca;
+
+  font-size:13px;
+  line-height:1.8;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  min-height:50px;
+  padding:0 22px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  border-radius:30px;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.4px;
+
+  transition:.3s ease;
+}
+
+.btn-light{
+  color:var(--brown);
+  background:#fff8ef;
+}
+
+.btn-outline{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.06);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.hero-stamp{
+  position:absolute;
+
+  right:8%;
+  bottom:8%;
+
+  width:120px;
+  height:120px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50%;
+
+  color:#fff;
+
+  font-family:Georgia,serif;
+  font-size:10px;
+  font-style:italic;
+  text-align:center;
+
+  transform:rotate(-12deg);
+}
+
+.hero-stamp::before{
+  content:"✦";
+
+  position:absolute;
+  top:15px;
+
+  color:var(--gold2);
+  font-size:14px;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+  background:var(--paper);
+  padding:0;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  border-left:1px solid var(--line);
+}
+
+.intro-item{
+  min-height:125px;
+
+  padding:32px;
+
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.intro-number{
+  color:var(--gold);
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.intro-item h3{
+  margin-top:15px;
+
+  font-family:Georgia,serif;
+  font-size:20px;
+  font-weight:normal;
+}
+
+.intro-item p{
+  margin-top:6px;
+
+  color:var(--muted);
+
+  font-size:10px;
+  line-height:1.5;
+}
+
+/* ================= SECTION ================= */
+
+section{
+  padding:125px 0;
+}
+
+.section-top{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:50px;
+
+  margin-bottom:55px;
+}
+
+.eyebrow{
+  margin-bottom:14px;
+
+  color:var(--gold);
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2.7px;
+  text-transform:uppercase;
+}
+
+.section-title{
+  max-width:760px;
+
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-size:clamp(48px,6vw,78px);
+  line-height:.94;
+  letter-spacing:-4px;
+  font-weight:normal;
+}
+
+.section-title em{
+  color:var(--rose);
+  font-weight:normal;
+}
+
+.section-text{
+  max-width:360px;
+
+  color:var(--muted);
+
+  font-size:12px;
+  line-height:1.8;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:var(--paper);
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:1.35fr .65fr .65fr;
+  gap:14px;
+}
+
+.service-card{
+  min-height:500px;
+
+  overflow:hidden;
+  position:relative;
+
+  background:#ddd;
+
+  border-radius:3px;
+
+  color:#fff;
+}
+
+.service-card:nth-child(2),
+.service-card:nth-child(3){
+  min-height:500px;
+}
+
+.service-image{
+  position:absolute;
+  inset:0;
+
+  transition:.6s ease;
+}
+
+.service-card:hover .service-image{
+  transform:scale(1.06);
+}
+
+.service-image.one{
+  background:
+    linear-gradient(to top,rgba(20,10,9,.75),transparent 60%),
+    url("https://ritus-beauty-salon-k783.arcada.app/images/blowout.jpg")
+    center/cover no-repeat;
+}
+
+.service-image.two{
+  background:
+    linear-gradient(to top,rgba(20,10,9,.72),transparent 60%),
+    url("https://thedeal.qa/_next/image?q=75&url=https%3A%2F%2Fthedealqa.s3.eu-central-1.amazonaws.com%2Fprojects%2Fimg_6kIA7AGcqI_1776507667.png&w=2048")
+    center/cover no-repeat;
+}
+
+.service-image.three{
+  background:
+    linear-gradient(to top,rgba(20,10,9,.72),transparent 60%),
+    url("https://www.ytechsol.com/blog-images/best-salons-karamadai.webp")
+    center/cover no-repeat;
+}
+
+.service-content{
+  position:absolute;
+
+  left:28px;
+  right:28px;
+  bottom:28px;
+
+  z-index:3;
+}
+
+.service-number{
+  color:var(--gold2);
+
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.service-content h3{
+  margin-top:10px;
+
+  font-family:Georgia,serif;
+
+  font-size:32px;
+  line-height:.95;
+  font-weight:normal;
+}
+
+.service-content p{
+  max-width:310px;
+
+  margin-top:11px;
+
+  color:#e5d8d1;
+
+  font-size:10px;
+  line-height:1.6;
+}
+
+/* ================= FEATURE ================= */
+
+.feature{
+  background:var(--cream);
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:80px;
+
+  align-items:center;
+}
+
+.feature-copy h2{
+  max-width:500px;
+
+  font-family:Georgia,serif;
+
+  font-size:clamp(48px,5.5vw,70px);
+  line-height:.95;
+  letter-spacing:-3px;
+  font-weight:normal;
+}
+
+.feature-copy h2 em{
+  color:var(--rose);
+}
+
+.feature-copy p{
+  max-width:470px;
+
+  margin-top:25px;
+
+  color:var(--muted);
+
+  font-size:12px;
+  line-height:1.9;
+}
+
+.feature-list{
+  margin-top:30px;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.feature-list-item{
+  padding:16px 0;
+
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+
+  border-bottom:1px solid var(--line);
+
+  font-family:Georgia,serif;
+  font-size:15px;
+}
+
+.feature-list-item span{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-size:9px;
+}
+
+.feature-photo{
+  min-height:600px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#ddd;
+}
+
+.feature-photo img{
+  height:600px;
+  object-fit:cover;
+}
+
+.photo-tag{
+  position:absolute;
+
+  left:25px;
+  bottom:25px;
+
+  padding:12px 15px;
+
+  color:var(--brown);
+
+  background:rgba(255,250,244,.9);
+
+  font-family:Georgia,serif;
+  font-size:12px;
+  font-style:italic;
+}
+
+/* ================= BRIDAL ================= */
+
+.bridal{
+  background:var(--brown);
+  color:#fff;
+}
+
+.bridal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+
+  align-items:center;
+}
+
+.bridal-photo{
+  position:relative;
+
+  min-height:610px;
+
+  overflow:hidden;
+}
+
+.bridal-photo img{
+  height:610px;
+  object-fit:cover;
+}
+
+.bridal-frame{
+  position:absolute;
+  inset:18px;
+
+  border:1px solid rgba(255,255,255,.4);
+
+  pointer-events:none;
+}
+
+.bridal-copy .eyebrow{
+  color:var(--gold2);
+}
+
+.bridal-copy h2{
+  max-width:620px;
+
+  font-family:Georgia,serif;
+
+  font-size:clamp(50px,6vw,80px);
+  line-height:.91;
+  letter-spacing:-4px;
+  font-weight:normal;
+}
+
+.bridal-copy h2 em{
+  color:var(--gold2);
+}
+
+.bridal-copy p{
+  max-width:490px;
+
+  margin-top:25px;
+
+  color:#c9b9b2;
+
+  font-size:12px;
+  line-height:1.9;
+}
+
+.bridal-details{
+  margin-top:30px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.detail{
+  padding:18px;
+
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.detail strong{
+  display:block;
+
+  font-family:Georgia,serif;
+  font-size:16px;
+  font-weight:normal;
+}
+
+.detail span{
+  display:block;
+  margin-top:6px;
+
+  color:#99857e;
+
+  font-size:9px;
+  line-height:1.5;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+  background:var(--paper);
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr .9fr;
+  grid-template-rows:250px 250px;
+  gap:12px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  position:relative;
+
+  background:#ddd;
+}
+
+.gallery-item:first-child{
+  grid-row:1/3;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:.6s ease;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+.gallery-label{
+  position:absolute;
+
+  left:16px;
+  bottom:16px;
+
+  padding:8px 11px;
+
+  color:#fff;
+
+  background:rgba(25,15,14,.65);
+
+  backdrop-filter:blur(10px);
+
+  font-size:8px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* ================= PACKAGES ================= */
+
+.packages{
+  background:#eee5db;
+}
+
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.package{
+  padding:30px;
+
+  min-height:420px;
+
+  display:flex;
+  flex-direction:column;
+
+  border:1px solid rgba(36,24,23,.12);
+
+  background:#f9f2ea;
+}
+
+.package.featured{
+  color:#fff;
+
+  background:var(--brown);
+}
+
+.package-name{
+  color:var(--gold);
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.package h3{
+  margin-top:18px;
+
+  font-family:Georgia,serif;
+
+  font-size:31px;
+  font-weight:normal;
+}
+
+.package-price{
+  margin-top:14px;
+
+  font-family:Georgia,serif;
+
+  font-size:30px;
+}
+
+.package-description{
+  min-height:48px;
+
+  margin-top:12px;
+
+  color:var(--muted);
+
+  font-size:10px;
+  line-height:1.6;
+}
+
+.package.featured .package-description{
+  color:#a8958e;
+}
+
+.package-list{
+  margin-top:25px;
+
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
+.package-list div{
+  display:flex;
+  gap:9px;
+
+  font-size:10px;
+}
+
+.package-list span{
+  color:var(--gold);
+}
+
+.package-btn{
+  min-height:46px;
+
+  margin-top:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--line);
+
+  font-size:9px;
+  font-weight:800;
+
+  transition:.25s ease;
+}
+
+.package.featured .package-btn{
+  border-color:rgba(255,255,255,.2);
+}
+
+.package-btn:hover{
+  background:var(--brown);
+  color:#fff;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+  background:var(--cream);
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.testimonial{
+  padding:30px;
+
+  min-height:260px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.28);
+}
+
+.stars{
+  color:var(--gold);
+
+  font-size:12px;
+  letter-spacing:3px;
+}
+
+.testimonial p{
+  margin-top:30px;
+
+  font-family:Georgia,serif;
+
+  font-size:19px;
+  line-height:1.45;
+}
+
+.person{
+  margin-top:28px;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.person-circle{
+  width:34px;
+  height:34px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#fff;
+  background:var(--brown);
+
+  font-size:9px;
+}
+
+.person strong{
+  display:block;
+  font-size:10px;
+}
+
+.person span{
+  display:block;
+  margin-top:3px;
+
+  color:var(--muted);
+
+  font-size:8px;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+  padding-top:80px;
+  padding-bottom:90px;
+
+  background:var(--paper);
+}
+
+.booking-box{
+  min-height:430px;
+
+  padding:70px;
+
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  align-items:center;
+  gap:50px;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(30,18,17,.96),
+      rgba(55,35,32,.88)
+    ),
+    url("https://uae.businessesforsale.com/uploads/e63dc155-d83d-4406-b831-b45100ac5a5c.jpg")
+    center/cover;
+
+  color:#fff;
+}
+
+.booking-box::after{
+  content:"";
+
+  position:absolute;
+  width:400px;
+  height:400px;
+
+  right:-180px;
+  top:-180px;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.booking-box h2{
+  max-width:650px;
+
+  font-family:Georgia,serif;
+
+  font-size:clamp(50px,6vw,82px);
+  line-height:.91;
+  letter-spacing:-4px;
+  font-weight:normal;
+}
+
+.booking-box h2 em{
+  color:var(--gold2);
+}
+
+.booking-box p{
+  max-width:430px;
+
+  margin-top:20px;
+
+  color:#c8b7b0;
+
+  font-size:11px;
+  line-height:1.8;
+}
+
+.contact-info{
+  position:relative;
+  z-index:2;
+
+  padding:25px;
+
+  border:1px solid rgba(255,255,255,.15);
+
+  background:rgba(255,255,255,.05);
+}
+
+.contact-row{
+  padding:16px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.contact-row:last-child{
+  border-bottom:0;
+}
+
+.contact-row small{
+  display:block;
+
+  color:var(--gold2);
+
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.contact-row strong{
+  display:block;
+  margin-top:6px;
+
+  font-family:Georgia,serif;
+  font-size:15px;
+  font-weight:normal;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  padding:35px 0;
+
+  color:#fff;
+  background:var(--brown);
+}
+
+.footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.footer-logo{
+  font-family:Georgia,serif;
+  font-size:20px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+
+  color:#aa9690;
+
+  font-size:9px;
+}
+
+.footer-links a:hover{
+  color:var(--gold2);
+}
+
+.copyright{
+  color:#75615c;
+
+  font-size:8px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+
+  right:20px;
+  bottom:20px;
+
+  width:55px;
+  height:55px;
+
+  z-index:90;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#fff;
+  background:#25d366;
+
+  font-size:18px;
+
+  box-shadow:0 12px 30px rgba(37,211,102,.25);
+
+  transition:.3s ease;
+}
+
+.whatsapp:hover{
+  transform:translateY(-4px) scale(1.05);
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:1000px){
+
+  .hero{
+    min-height:780px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .service-card:first-child{
+    grid-column:1/-1;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .feature-photo{
+    order:-1;
+  }
+
+  .bridal-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:300px 220px 220px;
+  }
+
+  .gallery-item:first-child{
+    grid-column:1/-1;
+    grid-row:auto;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .package:last-child{
+    grid-column:1/-1;
+  }
+
+  .testimonial-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .testimonial:last-child{
+    grid-column:1/-1;
+  }
+
+  .booking-box{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:650px){
+
+  .container{
+    width:calc(100% - 28px);
+  }
+
+  .nav{
+    padding:10px 0;
+  }
+
+  .nav-inner{
+    width:calc(100% - 18px);
+    min-height:55px;
+    padding-left:14px;
+  }
+
+  .logo{
+    font-size:16px;
+  }
+
+  .logo-circle{
+    width:29px;
+    height:29px;
+    font-size:13px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-book{
+    min-height:35px;
+    padding:0 12px;
+    font-size:8px;
+  }
+
+  .hero{
+    min-height:750px;
+    padding:135px 0 55px;
+  }
+
+  .hero-photo{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20,11,10,.9),
+        rgba(20,11,10,.38)
+      ),
+      url("https://thedeal.qa/_next/image?q=75&url=https%3A%2F%2Fthedealqa.s3.eu-central-1.amazonaws.com%2Fprojects%2Fimg_6kIA7AGcqI_1776507667.png&w=2048")
+      58% center/cover no-repeat;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,15vw,70px);
+    letter-spacing:-3.8px;
+  }
+
+  .hero-description{
+    font-size:11px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-stamp{
+    width:90px;
+    height:90px;
+    right:8%;
+    bottom:10%;
+    font-size:8px;
+  }
+
+  .intro-grid{
+    grid-template-columns:1fr;
+  }
+
+  .intro-item{
+    min-height:auto;
+    padding:23px 20px;
+  }
+
+  section{
+    padding:85px 0;
+  }
+
+  .section-top{
+    display:block;
+    margin-bottom:35px;
+  }
+
+  .section-title{
+    font-size:44px;
+    letter-spacing:-2.8px;
+  }
+
+  .section-text{
+    margin-top:18px;
+    font-size:11px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card,
+  .service-card:nth-child(2),
+  .service-card:nth-child(3){
+    min-height:360px;
+  }
+
+  .feature-photo,
+  .feature-photo img{
+    min-height:420px;
+    height:420px;
+  }
+
+  .feature-copy h2{
+    font-size:44px;
+    letter-spacing:-2.7px;
+  }
+
+  .bridal-photo,
+  .bridal-photo img{
+    min-height:430px;
+    height:430px;
+  }
+
+  .bridal-copy h2{
+    font-size:47px;
+    letter-spacing:-3px;
+  }
+
+  .bridal-details{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:330px 240px 240px 240px;
+  }
+
+  .gallery-item:first-child{
+    grid-column:auto;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr;
+  }
+
+  .package:last-child{
+    grid-column:auto;
+  }
+
+  .package{
+    min-height:380px;
+  }
+
+  .testimonial-grid{
+    grid-template-columns:1fr;
+  }
+
+  .testimonial:last-child{
+    grid-column:auto;
+  }
+
+  .booking{
+    padding-top:40px;
+  }
+
+  .booking-box{
+    min-height:auto;
+
+    padding:55px 24px;
+
+    gap:35px;
+  }
+
+  .booking-box h2{
+    font-size:47px;
+    letter-spacing:-3px;
+  }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-links{
+    flex-wrap:wrap;
+  }
+
+  .whatsapp{
+    right:15px;
+    bottom:15px;
+
+    width:50px;
+    height:50px;
+  }
+}
+
+/* ================= SMALL ================= */
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .section-title{
+    font-size:40px;
+  }
+
+  .feature-copy h2{
+    font-size:40px;
+  }
+
+  .bridal-copy h2{
+    font-size:42px;
+  }
+
+  .booking-box h2{
+    font-size:42px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      <span class="logo-circle">A</span>
+      Arju Beauty Studio
+    </a>
+
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#packages">Packages</a>
+    </nav>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="nav-book"
+    >
+      BOOK APPOINTMENT
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-photo"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-kicker">
+      <span></span>
+      Beauty • Bridal • Wellness
+    </div>
+
+    <h1>
+      Your beauty,
+      <br>
+      <em>beautifully</em>
+      elevated.
+    </h1>
+
+    <p class="hero-description">
+      A refined beauty experience where thoughtful styling,
+      premium care and your individual beauty come together.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#services" class="btn btn-light">
+        Explore Services
+        ↗
+      </a>
+
+      <a
+        href="https://wa.me/919580200468"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-outline"
+      >
+        Book Your Appointment
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-stamp">
+    BEAUTY<br>
+    MADE<br>
+    PERSONAL
+  </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<div class="intro">
+
+<div class="container">
+
+<div class="intro-grid">
+
+  <div class="intro-item">
+
+    <div class="intro-number">01</div>
+
+    <h3>Personal Care</h3>
+
+    <p>
+      Every service is tailored to your beauty and style.
+    </p>
+
+  </div>
+
+
+  <div class="intro-item">
+
+    <div class="intro-number">02</div>
+
+    <h3>Premium Experience</h3>
+
+    <p>
+      A calm, elegant environment designed around you.
+    </p>
+
+  </div>
+
+
+  <div class="intro-item">
+
+    <div class="intro-number">03</div>
+
+    <h3>Beautiful Results</h3>
+
+    <p>
+      Looks that make you feel confident and radiant.
+    </p>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-top">
+
+  <div>
+
+    <div class="eyebrow">
+      Our Services
+    </div>
+
+    <h2 class="section-title">
+      Beauty rituals,<br>
+      <em>reimagined.</em>
+    </h2>
+
+  </div>
+
+  <p class="section-text">
+    From everyday beauty to your most important occasions,
+    discover services designed with elegance, care and detail.
+  </p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+  <article class="service-card">
+
+    <div class="service-image one"></div>
+
+    <div class="service-content">
+
+      <div class="service-number">
+        01 / HAIR
+      </div>
+
+      <h3>
+        Hair &<br>
+        Styling
+      </h3>
+
+      <p>
+        Elegant styling, blowouts and occasion-ready
+        hair designed to complement your look.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <article class="service-card">
+
+    <div class="service-image two"></div>
+
+    <div class="service-content">
+
+      <div class="service-number">
+        02 / MAKEUP
+      </div>
+
+      <h3>
+        Makeup
+      </h3>
+
+      <p>
+        Soft glam and occasion makeup with a
+        polished, natural finish.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <article class="service-card">
+
+    <div class="service-image three"></div>
+
+    <div class="service-content">
+
+      <div class="service-number">
+        03 / SKIN
+      </div>
+
+      <h3>
+        Skin &<br>
+        Glow
+      </h3>
+
+      <p>
+        Relaxing facial and glow treatments for
+        fresh-looking skin.
+      </p>
+
+    </div>
+
+  </article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+
+<section class="feature" id="about">
+
+<div class="container">
+
+<div class="feature-grid">
+
+  <div class="feature-copy">
+
+    <div class="eyebrow">
+      The Arju Experience
+    </div>
+
+    <h2>
+      Where beauty
+      becomes <em>confidence.</em>
+    </h2>
+
+    <p>
+      At Arju Beauty Studio, we believe the best beauty
+      experience is one that still feels like you.
+
+      Every appointment is created with attention to
+      your personality, your occasion and the details
+      that make you feel your best.
+    </p>
+
+    <div class="feature-list">
+
+      <div class="feature-list-item">
+        Personalised Beauty
+        <span>01</span>
+      </div>
+
+      <div class="feature-list-item">
+        Elegant Styling
+        <span>02</span>
+      </div>
+
+      <div class="feature-list-item">
+        Bridal Expertise
+        <span>03</span>
+      </div>
+
+      <div class="feature-list-item">
+        Relaxed Experience
+        <span>04</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="feature-photo">
+
+    <img
+      src="https://www.ytechsol.com/blog-images/best-salons-karamadai.webp"
+      alt="Luxury beauty salon treatment"
+    >
+
+    <div class="photo-tag">
+      Beauty, with intention.
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BRIDAL ================= -->
+
+<section class="bridal">
+
+<div class="container">
+
+<div class="bridal-grid">
+
+  <div class="bridal-photo">
+
+    <img
+      src="https://static.wixstatic.com/media/34bae2_5f7624a437b540319e6f0574ccce301b~mv2.png/v1/fill/w_980%2Ch_980%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/wedding%20makeover%20%281%29.png"
+      alt="Bridal beauty styling"
+    >
+
+    <div class="bridal-frame"></div>
+
+  </div>
+
+
+  <div class="bridal-copy">
+
+    <div class="eyebrow">
+      Bridal Beauty
+    </div>
+
+    <h2>
+      Your most
+      <em>beautiful</em>
+      day.
+    </h2>
+
+    <p>
+      Your wedding look should feel timeless, elegant and
+      completely yours.
+
+      Our bridal experience brings together makeup,
+      hairstyling and personalised beauty preparation
+      for a look you will love in every photograph.
+    </p>
+
+    <div class="bridal-details">
+
+      <div class="detail">
+        <strong>Bridal Makeup</strong>
+        <span>
+          Personalised makeup designed around your features.
+        </span>
+      </div>
+
+      <div class="detail">
+        <strong>Hair Styling</strong>
+        <span>
+          Elegant hairstyles created for your outfit and ceremony.
+        </span>
+      </div>
+
+      <div class="detail">
+        <strong>Glow Preparation</strong>
+        <span>
+          Beauty preparation before your special day.
+        </span>
+      </div>
+
+      <div class="detail">
+        <strong>Consultation</strong>
+        <span>
+          Plan your complete bridal look in advance.
+        </span>
+      </div>
+
+    </div>
+
+    <br>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="btn btn-light"
+    >
+      Enquire About Bridal
+      ↗
+    </a>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-top">
+
+  <div>
+
+    <div class="eyebrow">
+      The Gallery
+    </div>
+
+    <h2 class="section-title">
+      A glimpse of<br>
+      <em>the experience.</em>
+    </h2>
+
+  </div>
+
+  <p class="section-text">
+    Explore the beauty, atmosphere and artistry that
+    make every visit feel special.
+  </p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+  <div class="gallery-item">
+
+    <img
+      src="https://ritus-beauty-salon-k783.arcada.app/images/blowout.jpg"
+      alt="Hair styling"
+    >
+
+    <div class="gallery-label">
+      Hair Styling
+    </div>
+
+  </div>
+
+
+  <div class="gallery-item">
+
+    <img
+      src="https://thedeal.qa/_next/image?q=75&url=https%3A%2F%2Fthedealqa.s3.eu-central-1.amazonaws.com%2Fprojects%2Fimg_6kIA7AGcqI_1776507667.png&w=2048"
+      alt="Makeup session"
+    >
+
+    <div class="gallery-label">
+      Makeup
+    </div>
+
+  </div>
+
+
+  <div class="gallery-item">
+
+    <img
+      src="https://www.ytechsol.com/blog-images/best-salons-karamadai.webp"
+      alt="Facial beauty treatment"
+    >
+
+    <div class="gallery-label">
+      Skin & Glow
+    </div>
+
+  </div>
+
+
+  <div class="gallery-item">
+
+    <img
+      src="https://static.wixstatic.com/media/34bae2_5f7624a437b540319e6f0574ccce301b~mv2.png/v1/fill/w_980%2Ch_980%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/wedding%20makeover%20%281%29.png"
+      alt="Bridal styling"
+    >
+
+    <div class="gallery-label">
+      Bridal
+    </div>
+
+  </div>
+
+
+  <div class="gallery-item">
+
+    <img
+      src="https://uae.businessesforsale.com/uploads/e63dc155-d83d-4406-b831-b45100ac5a5c.jpg"
+      alt="Luxury salon interior"
+    >
+
+    <div class="gallery-label">
+      Studio
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PACKAGES ================= -->
+
+<section class="packages" id="packages">
+
+<div class="container">
+
+<div class="section-top">
+
+  <div>
+
+    <div class="eyebrow">
+      Beauty Packages
+    </div>
+
+    <h2 class="section-title">
+      Choose your<br>
+      <em>moment.</em>
+    </h2>
+
+  </div>
+
+  <p class="section-text">
+    Simple packages for everyday beauty, special occasions
+    and personalised bridal experiences.
+  </p>
+
+</div>
+
+
+<div class="package-grid">
+
+
+  <article class="package">
+
+    <div class="package-name">
+      Everyday
+    </div>
+
+    <h3>
+      Fresh Glow
+    </h3>
+
+    <div class="package-price">
+      ₹999
+    </div>
+
+    <p class="package-description">
+      A simple beauty refresh when you want to
+      look and feel your best.
+    </p>
+
+    <div class="package-list">
+
+      <div>
+        <span>✓</span>
+        Beauty service
+      </div>
+
+      <div>
+        <span>✓</span>
+        Glow care
+      </div>
+
+      <div>
+        <span>✓</span>
+        Personal consultation
+      </div>
+
+      <div>
+        <span>✓</span>
+        Relaxed experience
+      </div>
+
+    </div>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="package-btn"
+    >
+      BOOK PACKAGE
+    </a>
+
+  </article>
+
+
+  <article class="package featured">
+
+    <div class="package-name">
+      Signature
+    </div>
+
+    <h3>
+      Arju Glam
+    </h3>
+
+    <div class="package-price">
+      ₹2,499
+    </div>
+
+    <p class="package-description">
+      A complete polished beauty experience for
+      your special occasion.
+    </p>
+
+    <div class="package-list">
+
+      <div>
+        <span>✓</span>
+        Premium beauty service
+      </div>
+
+      <div>
+        <span>✓</span>
+        Hair styling
+      </div>
+
+      <div>
+        <span>✓</span>
+        Glow treatment
+      </div>
+
+      <div>
+        <span>✓</span>
+        Occasion-ready finish
+      </div>
+
+      <div>
+        <span>✓</span>
+        Personal consultation
+      </div>
+
+    </div>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="package-btn"
+    >
+      BOOK SIGNATURE
+    </a>
+
+  </article>
+
+
+  <article class="package">
+
+    <div class="package-name">
+      Bridal
+    </div>
+
+    <h3>
+      The Bride
+    </h3>
+
+    <div class="package-price">
+      Custom
+    </div>
+
+    <p class="package-description">
+      A complete personalised bridal beauty
+      experience for your special day.
+    </p>
+
+    <div class="package-list">
+
+      <div>
+        <span>✓</span>
+        Bridal makeup
+      </div>
+
+      <div>
+        <span>✓</span>
+        Hair styling
+      </div>
+
+      <div>
+        <span>✓</span>
+        Beauty preparation
+      </div>
+
+      <div>
+        <span>✓</span>
+        Bridal consultation
+      </div>
+
+    </div>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="package-btn"
+    >
+      ENQUIRE NOW
+    </a>
+
+  </article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-top">
+
+  <div>
+
+    <div class="eyebrow">
+      Client Love
+    </div>
+
+    <h2 class="section-title">
+      Words that<br>
+      <em>matter.</em>
+    </h2>
+
+  </div>
+
+</div>
+
+
+<div class="testimonial-grid">
+
+
+  <article class="testimonial">
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <p>
+      “The whole experience felt so beautiful and
+      relaxing. I absolutely loved my final look.”
+    </p>
+
+    <div class="person">
+
+      <div class="person-circle">
+        P
+      </div>
+
+      <div>
+        <strong>Priya</strong>
+        <span>Beauty Client</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <article class="testimonial">
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <p>
+      “My bridal look was exactly what I had imagined.
+      Elegant, natural and perfect for my wedding.”
+    </p>
+
+    <div class="person">
+
+      <div class="person-circle">
+        S
+      </div>
+
+      <div>
+        <strong>Simran</strong>
+        <span>Bridal Client</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <article class="testimonial">
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <p>
+      “Loved the attention to detail. I felt confident
+      and genuinely beautiful.”
+    </p>
+
+    <div class="person">
+
+      <div class="person-circle">
+        N
+      </div>
+
+      <div>
+        <strong>Neha</strong>
+        <span>Beauty Client</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking">
+
+<div class="container">
+
+<div class="booking-box">
+
+  <div>
+
+    <div class="eyebrow">
+      Your Beauty Appointment
+    </div>
+
+    <h2>
+      Let's create
+      something <em>beautiful.</em>
+    </h2>
+
+    <p>
+      Ready for your next beauty moment?
+      Send us a message and tell us what
+      service you are looking for.
+    </p>
+
+    <br>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+      class="btn btn-light"
+    >
+      Book on WhatsApp
+      ↗
+    </a>
+
+  </div>
+
+
+  <div class="contact-info">
+
+    <div class="contact-row">
+
+      <small>
+        Opening Hours
+      </small>
+
+      <strong>
+        Mon — Sun · 10:00 AM — 8:00 PM
+      </strong>
+
+    </div>
+
+
+    <div class="contact-row">
+
+      <small>
+        Appointment
+      </small>
+
+      <strong>
+        WhatsApp Booking
+      </strong>
+
+    </div>
+
+
+    <div class="contact-row">
+
+      <small>
+        Instagram
+      </small>
+
+      <strong>
+        @arjubeautystudio
+      </strong>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer">
+
+  <div>
+
+    <div class="footer-logo">
+      Arju Beauty Studio
+    </div>
+
+    <div class="copyright">
+      © 2026 Arju Beauty Studio
+    </div>
+
+  </div>
+
+
+  <div class="footer-links">
+
+    <a href="#services">
+      Services
+    </a>
+
+    <a href="#gallery">
+      Gallery
+    </a>
+
+    <a href="#packages">
+      Packages
+    </a>
+
+    <a
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      Instagram
+    </a>
+
+    <a
+      href="https://wa.me/919580200468"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+
+  </div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+  href="https://wa.me/919580200468"
+  target="_blank"
+  rel="noopener"
+  class="whatsapp"
+  aria-label="Book appointment on WhatsApp"
+>
+  ☎
+</a>
+
+</body>
+</html>
